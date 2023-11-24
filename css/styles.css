@@ -1,76 +1,97 @@
 @import url("./reset.css");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+@import url("./navbar.css");
+@import url("./sidebar.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
 /* Wrappers? No thanks. */
 /* Set this class to the <Main> element, and use the "full-width" class on content that need to break out of the grid. E.g banners, footer */
-.main-grid, .full-width {
-    --padding-inline: 2rem;
-    --content-max-width: 170ch; /* ch seems to work best to make the grid responsive without the use of queries */
-    
-    display: grid;
-    grid-template-columns: 
+.main-grid,
+.full-width {
+  --padding-inline: 2rem;
+  --content-max-width: 170ch; /* ch seems to work best to make the grid responsive without the use of queries */
+
+  display: grid;
+  grid-template-columns:
     [full-width-start]
-    minmax(var(--padding-inline), 1fr) 
-    [content-start] 
-    min(100% - (var(--padding-inline) * 2), var(--content-max-width)) /* Sets content width to 100% minus the padding on the sides IF screen is smaller than content-max-width */
-    [content-end] 
-    minmax(var(--padding-inline), 1fr) 
-    [full-width-end]; 
+    minmax(var(--padding-inline), 1fr)
+    [content-start]
+    min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    ) /* Sets content width to 100% minus the padding on the sides IF screen is smaller than content-max-width */
+    [content-end]
+    minmax(var(--padding-inline), 1fr)
+    [full-width-end];
 }
 
 /* ", .full-width" is declared above and below this comment which makes the content inside the container breaking out of the grid to be place inside the grid again. */
 /* If that is not a desired behavior, remove the ", .full-width" from both, and if you want to center the content manually use ".main-grid" in addition to "full-width" on the breakout container. */
 
-.main-grid > *, .full-width > * {
-    grid-column: content;
+.main-grid > *,
+.full-width > * {
+  grid-column: content;
 }
 
 .main-grid > .full-width {
-    grid-column: full-width;
+  grid-column: full-width;
 }
 
 :root {
-    /* colors */
-    --color-main: #0153B6; /* Most h1/h2 and buttons */
-    --color-main-hover: #3584D3; /* hover-state buttons and/or borders */
-    --color-secondary: #000B3A; /* BG for cards */
-    --text-secondary: #959595; /* Used for schedule table */
+  /* colors */
+  --color-bg: #21243f;
+  --color-main: #4496fa; /* Most h1/h2 and buttons */
+  --color-main-hover: #8ecafd; /* hover-state buttons and/or borders */
+  --color-secondary: #000b3a; /* BG for cards */
+  --text-secondary: #959595;
 
-    /* font weights */
-    --fw-regular: 400;
-    --fw-medium: 500;
-    --fw-bold: 700;
-    --fw-black: 900;
+  /* font weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
 }
 
 body {
-    background-color: #000421;
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
-    max-width: 1920px;
-    margin: auto; /* Keeps everything centered at larger screens */
+  background-color: var(--color-bg);
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+main {
+  max-width: 1920px;
+  margin: auto; /* Keeps everything centered at larger screens */
 }
 
 h1 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 h2 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 p {
-    font-size: 1.125rem;
+  font-size: 1.125rem;
 }
 
 span {
-    font-size: 1.125rem;
+  font-size: 1.125rem;
 }
 
 img .rounded {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .border {
-    border: solid 1px white;
+  border: solid 1px white;
+}
+
+footer {
+  background-color: var(--color-secondary);
+  max-width: 100%;
+}
+
+footer .footer-content {
+  max-width: 1920px;
+  margin: auto;
 }

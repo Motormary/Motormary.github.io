@@ -1,0 +1,101 @@
+/* HIDDEN TOGGLE */
+.menu-toggle {
+  display: none;
+}
+
+/* ---------------------------- */
+
+/* SLIDE-IN TRANSITION */
+.menu-icon + .sidebar {
+  transition: 0.3s;
+}
+/* ------------------------- */
+
+/* ON CLICK - SET WIDTH */
+@media only screen and (min-width: 450px) {
+  .menu-toggle:checked + .menu-icon + .sidebar {
+    width: 15.5rem;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .menu-toggle:checked + .menu-icon + .sidebar {
+    width: 100%;
+  }
+}
+/* ------------------------------ */
+
+/* HIDE HAMBURGER @ LG */
+@media only screen and (min-width: 1201px) {
+  .menu-icon {
+    display: none;
+    visibility: hidden;
+  }
+}
+/* ---------------------------- */
+
+/* HAMBURGER */
+.menu-icon {
+  font-size: 2.5rem;
+  cursor: pointer;
+  text-align: center;
+  margin: 20px;
+}
+/* ----------------------------- */
+@media (min-width: 1201px) {
+  .sidebar {
+    display: none;
+    visibility: hidden;
+  }
+}
+/* SIDENAV */
+.sidebar {
+  width: 0;
+  height: calc(100vh - 7rem); /* Fallback if svh is not supported, change to % if any issues occure */
+  height: calc(100svh - 7rem); /* Calc to show all the nav-links when scrolled */
+  position: fixed;
+  top: 7rem; /* Avoiding the top nav */
+  right: 0;
+  background-color: var(--color-secondary);
+  overflow-x: hidden;
+  transition: 0.3s;
+  border-right: solid 1px black;
+}
+
+
+.sidebar ul li {
+  padding: 8px;
+  text-align: center;
+  margin: 2rem 0rem;
+}
+
+.sidebar ul li a {
+  font-weight: bold;
+  font-size: large;
+}
+
+/* SIDENAV SEARCHBAR */
+.sidebar-searchfield {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar-searchbar {
+  border: solid 1px gray;
+  border-radius: 6px;
+  outline: none;
+  height: 2rem;
+  width: 15rem;
+  background-color: #fff;
+  color: cadetblue;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
+/* HIDE ABOVE SM */
+@media only screen and (min-width: 600px) {
+  .sidebar-searchfield {
+    display: none;
+    visibility: hidden;
+  }
+}
