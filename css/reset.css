@@ -5,13 +5,16 @@
 * {
     margin: 0;
     padding: 0;
-    font: inherit;
 }
 
 body {
     position: relative;
     min-height: 100vh; /* Fallback if svh is not supported */
     min-height: 100svh; /* svh takes into consideration the URL-bar on mobile devices */
+}
+
+input, textarea, button, select {
+    font: inherit;
 }
 
 /* html {
