@@ -1,0 +1,60 @@
+footer {
+    background-image: var(--main-gradient);
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+  
+  footer .footer-content {
+    display: grid;
+    max-width: var(--content-max-width);
+    padding: 0 2rem;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+  
+  .footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  @media (max-width: 647px) {
+    /* Avoid displacing footer-logo */
+    .footer-item {
+      align-items: center;
+    }
+  
+    .footer-item .opening-hours,
+    .easter-egg,
+    .accessibility,
+    .admission,
+    .food,
+    .shop {
+      text-align: center;
+    }
+  }
+  
+  .footer-item .easter-egg,
+  .accessibility,
+  .admission,
+  .food,
+  .shop {
+    line-height: 1.5;
+    text-wrap: balance; /* Balances the amount of text on each line if the browser supports it, e.g chrome. */
+  }
+  
+  .footer-logo {
+    display: flex;
+    gap: 0.5rem;
+    font-weight: var(--fw-medium);
+  }
+  
+  .opening-hours {
+    line-height: 1.75;
+  }
+  
+  .easter-egg a {
+    text-decoration: underline;
+    text-underline-offset: 0.1rem;
+  }

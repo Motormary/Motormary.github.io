@@ -1,57 +1,76 @@
 @import url("./reset.css");
 @import url("./navbar.css");
+@import url("./footer.css");
 @import url("./sidebar.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
-/* Wrappers? No thanks. */
-/* Set this class to the <Main> element, and use the "full-width" class on content that need to break out of the grid. E.g banners, footer */
-.main-grid,
-.full-width {
-  --padding-inline: 2rem;
-
-  display: grid;
-  grid-template-columns:
-    [full-width-start]
-    minmax(var(--padding-inline), 1fr)
-    [content-start]
-    min(100% - (var(--padding-inline) * 2), var(--content-max-width))
-    /* Sets content width to 100% minus the padding on the sides IF screen is smaller than content-max-width */
-    [content-end]
-    minmax(var(--padding-inline), 1fr)
-    [full-width-end];
-}
-
-/* ", .full-width" is declared above and below this comment which makes the content inside the container breaking out of the grid to be place inside the grid again. */
-/* If that is not a desired behavior, remove the ", .full-width" from both, and if you want to center the content manually use ".main-grid" in addition to "full-width" on the breakout container. */
-
-.main-grid > *,
-.full-width > * {
-  grid-column: content;
-}
-
-.main-grid > .full-width {
-  grid-column: full-width;
+/* Wrapper */
+.container {
+max-width: var(--content-max-width);
+margin: auto;
+padding: 0 2rem;
 }
 
 :root {
-  --content-max-width: 170ch; /* ch seems to work best to make the grid responsive without the use of queries */
+  --content-max-width: 170ch;
 
   /* colors */
   --color-bg: #21243f;
+  --bg-gradient: linear-gradient(
+    45deg,
+    #22243f,
+    #22345c,
+    #324070,
+    #424d8b,
+    #5261af,
+    #6273ce
+  );
   --color-main: #4496fa; /* Most h1/h2 and buttons */
   --color-main-hover: #8ecafd; /* hover-state buttons and/or borders */
-  --color-secondary: #000b3a; /* BG for cards */
+  --color-secondary: #192e5a; /* BG for cards */
   --text-secondary: #959595;
+
+  --gradient: linear-gradient(
+    45deg,
+    #845ec2,
+    #d65db1,
+    #ff6f91,
+    #ff9671,
+    #ffc75f,
+    #f9f871
+  );
+
+  /* nav, footer, buttons */
+  --main-gradient: linear-gradient(
+    45deg,
+    #0e4180,
+    #004ead,
+    #005ed1,
+    #006aec,
+    #1f84ff,
+    #509fff
+  );
 
   /* font weights */
   --fw-regular: 400;
   --fw-medium: 500;
   --fw-bold: 700;
   --fw-black: 900;
+
+  /* font sizes */
+  --fs-h1: clamp(2.25rem, 3vw + 1rem, 6rem);
+  --fs-h2: clamp(1.5rem, 2vw + 1rem, 3rem);
+  --fs-p: 1.125rem;
 }
 
+/* @media (max-width: 40em) {
+    :root {
+        --fs-h1: 2.25rem
+    }
+} */
+
 body {
-  background-color: var(--color-bg);
+  background-image: var(--bg-gradient);
   font-family: "Roboto", sans-serif;
   color: #fff;
 }
@@ -62,15 +81,15 @@ main {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: var(--fs-h1);
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: var(--fs-h2);
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: var(--fs-p);
 }
 
 span {
@@ -79,61 +98,103 @@ span {
 
 img .rounded {
   border-radius: 50%;
+  aspect-ratio: 1;
 }
 
 .border {
   border: solid 1px white;
 }
 
-footer {
-  background-color: var(--color-secondary);
-  max-width: 100%;
-  padding: 1.5rem 1rem;
+/* .home-banner img {
+    opacity: 50%;
+    filter: blur(4px);
 }
 
-footer .footer-content {
-  display: grid;
-  max-width: var(--content-max-width);
-  margin: auto;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
-}
-
-.footer-item {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-@media (max-width: 647px) {
-    /* Avoid displacing footer-logo */
-    .footer-item {
-    align-items: center;
-    }
-
-    .footer-item .opening-hours, .easter-egg, .accessibility, .admission, .food, .shop {
-    text-align: center;
-    }
+.home-banner h1 {
+    position: absolute;
+    background-image: var(--gradient);
+    background-size: 300%;
+    background-position: left;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 6rem;
+    animation-name: home-header;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    user-select: none;
     
 }
 
-.footer-item .easter-egg, .accessibility, .admission, .food, .shop {
-    line-height: 1.5;
-    text-wrap: balance; /* Balances the amount of text on each line if the browser supports it, e.g chrome. */
-}
+@keyframes home-header {
+    25% {background-position: center;}
+    50% {background-position: right;}
+    75% {background-position: center;}
 
-.footer-logo {
+} */
+
+
+.banner-cta {
     display: flex;
-    gap: 0.5rem;
-    font-weight: var(--fw-medium);
+    flex-direction: column;
+    align-items: center;
+    border-radius: 6px;
+    padding: 2rem;
+    margin: 1rem;
+    border: solid;
+    text-align: center;
+    gap: 1.5rem;
+    background-color: #fff;
+    color: black;
 }
 
-.opening-hours {
-    line-height: 1.75;
+.book-button {
+border: solid 1px var(--color-main-hover);
+-webkit-box-shadow: 5px 5px 7px -1px #000000; 
+box-shadow: 5px 5px 7px -1px #000000;
+cursor: pointer;
+padding: 1rem 4rem;
+/* Rocket from www.freepik.com */
+background-image: url(/assets/images/rocket.jpg);
+background-size: 300%;
+background-position: left;
+border-radius: 6px;
+font-size: var(--fs-h2);
+font-weight: var(--fw-bold);
+color: #fff;
+}
+
+.book-button:hover {
+    background-position: right;
+    transition: 2s ease-in-out;
 }
 
 
-.easter-egg a{
-text-decoration: underline;
-text-underline-offset: 0.1rem;
+.explore {
+    margin-top: 3rem;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+
 }
+
+
+@media screen and (min-width: 810px) {
+    .explore {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.explore-text > * {
+    text-wrap: balance;
+    line-height: 1.4;
+    padding: 0.25rem 0;
+}
+
+#explore-title {
+    text-wrap: nowrap;
+}
+
+
+

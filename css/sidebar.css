@@ -55,10 +55,11 @@
   position: fixed;
   top: 7rem; /* Avoiding the top nav */
   right: 0;
-  background-color: var(--color-secondary);
+  background-image: var(--main-gradient);
   overflow-x: hidden;
   transition: 0.3s;
   border-right: solid 1px black;
+  z-index: 50;
 }
 
 
