@@ -19,6 +19,7 @@
   <header>
     <nav>
       <div class="nav-content">
+
         <div class="navbar-logo">
           <a href="index.html">
             <img src="assets/images/LOGO_2.png" alt="NCSM Logo" width="75" height="75">
@@ -31,14 +32,17 @@
             </div>
           </a>
         </div>
+
         <div class="nav-items">
+
           <ul class="navbar-list">
-            <li><a href="/">Home</a></li>
+            <li class="current-page"><a href="/">Home</a></li>
             <li><a href="/exhibition.html">Exhibition</a></li>
             <li><a href="/donate.html">Donate</a></li>
             <li><a href="/contact.html">Contact</a></li>
             <li><a href="/documents.html">Documents</a></li>
           </ul>
+
           <div class="hamburger">
             <input type="checkbox" role="button" aria-controls="sidebar" id="menu-toggle" class="menu-toggle">
             <label for="menu-toggle" class="menu-icon">&#9776;</label>
@@ -52,34 +56,41 @@
               </ul>
             </div>
           </div>
+
         </div>
+
       </div>
     </nav>
   </header>
   <!--! MAIN START -->
   <main>
 
-    <section class="home-banner" role="banner">
+    <section id="banner" class="home-banner" role="banner">
       <img src="assets/images/header2.jpg" alt="home banner">
       <div class="banner-cta">
-        <h2>Dino Tour @ Friday 13th!</h2>
+        <h2>Evolution Exhibition</h2>
+        <p>Next up:</p>
+        <p class="time">09:30am - 11:00am</p>
         <a href="#" class="book-button">Book</a>
       </div>
     </section>
 
-    <section aria-labelledby="explore-title">
-      <div class="container explore">
+    <section id="explore" aria-labelledby="explore-title">
+      <div class="container grid">
         <div class="explore-text">
-          <h1 id="explore-title" class="hero-title">Explore together</h1>
+          <h1 id="explore-title" class="header-color">Explore together</h1>
           <p>Come join us at the Community Science Museum where we're committed to making science accessible to all.
-          </p>
-          <p>Over the course of human history, science has developed from our early understanding of fire, wind, water,
+            <br> <br>
+            Over the course of human history, science has developed from our early understanding of fire,
+            wind, water,
             and earth to exploring everything from galaxies far away to the very building blocks of life itself.
-          </p>
-          <p>The aim of our museum is to create a space where everyone can experience the wonders of our discoveries and
+            <br> <br>
+            The aim of our museum is to create a space where everyone can experience the wonders of our
+            discoveries and
             perhaps even ignite a lifelong passion to continue the exploration of the world around us.
-          </p>
-          <p>We believe science should not be confined to the textbook, but brought to live through exhibits. This is
+            <br> <br>
+            We believe science should not be confined to the textbook, but brought to live through exhibits.
+            This is
             why
             we have over 1000 different exhibits on the many varied subjects of science to explore. Many of these
             exhibits
@@ -89,19 +100,57 @@
         </div>
         <div>
           <!-- no minus points for size, it's for the kids remember. -->
-          <img src="assets/images/dino.png" alt="museum exploration">
+          <img src="assets/images/dino.png" alt="T-rex Silhouette">
         </div>
       </div>
     </section>
 
-    <section>
-      <img src="assets/images/cta.jpg" alt="" height="452">
+    <section id="lunar" class="lunar-bg">
+      <div class="container">
+        <h2>Join us for a night at the museum and watch the lunar eclipse</h2>
+        <img src="assets/images/cta.jpg" alt="lunar eclipse timeline">
+        <div class="lunar-button">
+          <a href="#lunar" class="book-button">Join</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="kids">
+      <div class="container grid">
+        <div>
+          <img src="assets/images/billetto-editorial-334686.jpg" alt="Boy painting" class="">
+        </div>
+        <div>
+          <h1 class="header-color">For kids</h1>
+          <p>
+            Are you a young person looking to learn more about science? Come on down to our museum, there’s plenty to
+            see
+            and do.
+            <br><br>
+            You can learn about Newtonian physics from our bumper swing, or why not travel back in time and meet our
+            resident Woolly Mammoth? Our exhibits are designed to be accessible for interested minds, so make sure you
+            come
+            ready to learn and explore.
+            <br><br>
+            We also have the Young Stars club which meets once a week on a Saturday between 10:00 and 13:00 where you’ll
+            get
+            to explore and experiment with our team of experts.
+            <br><br>
+            During the school holidays we run special holiday clubs where you can join other children your age to go on
+            a
+            journey of discovery. Each holiday we pick a new theme to explore. To find out more about the holiday club
+            and
+            how you can join, send us a message.
+          </p>
+        </div>
+      </div>
     </section>
 
   </main>
   <!--! MAIN END -->
   <footer>
     <div class="footer-content">
+
       <div class="footer-item">
         <a href="index.html" class="footer-logo">
           <img src="assets/images/LOGO_2.png" alt="NCSM Logo" width="50" height="50">
@@ -111,25 +160,54 @@
           </div>
         </a>
         <div class="opening-hours">
-          <h3>Opening hours</h3>
-          <p>Monday: Closed</p>
-          <p>Tuesday: 10:00 - 16:00</p>
-          <p>Wednesday: 10:00 - 16:00</p>
-          <p>Thursday: 10:00 - 16:00</p>
-          <p>Friday: 10:00 - 19:00</p>
-          <p>Saturday: 09:00 - 16:00</p>
-          <p>Sunday: 09:00 - 13:00</p>
+          <table id="footer">
+            <tr>
+              <th>Day</th>
+              <th>Opening Hours</th>
+            </tr>
+            <tr>
+              <td>Monday</td>
+              <td>Closed</td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>10:00 - 16:00</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>10:00 - 16:00</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>10:00 - 16:00</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>10:00 - 19:00</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>09:00 - 16:00</td>
+            </tr>
+            <tr>
+              <td>Sunday</td>
+              <td>09:00 - 13:00</td>
+            </tr>
+          </table>
         </div>
       </div>
+
       <div class="footer-item">
         <div class="easter-egg">
           <h3>Visit</h3>
-          <a href="https://www.google.com/maps/place/26%C2%B021'28.4%22N+127%C2%B047'01.7%22E/@26.3579051,127.7836838,81m/data=!3m1!1e3!4m4!3m3!8m2!3d26.357896!4d127.783809?entry=ttu"
-            target="_blank">
-            <p>1428 Elm Street</p>
-            <p>Backstreet - BB</p>
-            <p>431.123.1423</p>
-          </a>
+          <address>
+            <a href="https://www.google.com/maps/place/26%C2%B021'28.4%22N+127%C2%B047'01.7%22E/@26.3579051,127.7836838,81m/data=!3m1!1e3!4m4!3m3!8m2!3d26.357896!4d127.783809?entry=ttu"
+              target="_blank">
+              1428 Elm Street <br>
+              Backstreet - BB <br>
+              431.123.1423
+            </a>
+          </address>
         </div>
         <div class="accessibility">
           <h3>Accessibility</h3>
@@ -137,6 +215,7 @@
             visually impaired.</p>
         </div>
       </div>
+
       <div class="footer-item">
         <div class="admission">
           <h3>Admission</h3>
@@ -150,6 +229,7 @@
           </p>
         </div>
       </div>
+
       <div class="footer-item">
         <div class="food">
           <h3>Food & drink</h3>
@@ -162,8 +242,10 @@
             you to continue to explore science even after you've left the museum.</p>
         </div>
       </div>
+
     </div>
   </footer>
+
 </body>
 
 </html>

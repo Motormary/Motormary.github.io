@@ -6,9 +6,9 @@
 
 /* Wrapper */
 .container {
-max-width: var(--content-max-width);
-margin: auto;
-padding: 0 2rem;
+  max-width: var(--content-max-width);
+  margin: auto;
+  padding: 0 2rem;
 }
 
 :root {
@@ -25,8 +25,8 @@ padding: 0 2rem;
     #5261af,
     #6273ce
   );
-  --color-main: #4496fa; /* Most h1/h2 and buttons */
-  --color-main-hover: #8ecafd; /* hover-state buttons and/or borders */
+  --color-main2: #4496fa; /* Most h1/h2 and buttons */
+  --color-main: #8ecafd; /* hover-state buttons and/or borders */
   --color-secondary: #192e5a; /* BG for cards */
   --text-secondary: #959595;
 
@@ -60,7 +60,7 @@ padding: 0 2rem;
   /* font sizes */
   --fs-h1: clamp(2.25rem, 3vw + 1rem, 6rem);
   --fs-h2: clamp(1.5rem, 2vw + 1rem, 3rem);
-  --fs-p: 1.125rem;
+  --fs-p: 1.25rem;
 }
 
 /* @media (max-width: 40em) {
@@ -70,7 +70,8 @@ padding: 0 2rem;
 } */
 
 body {
-  background-image: var(--bg-gradient);
+  /* svg from svgbackgrounds.com */
+  background-image: url(/assets/images/scales2.svg);
   font-family: "Roboto", sans-serif;
   color: #fff;
 }
@@ -82,6 +83,7 @@ main {
 
 h1 {
   font-size: var(--fs-h1);
+
 }
 
 h2 {
@@ -96,13 +98,25 @@ span {
   font-size: 1.125rem;
 }
 
-img .rounded {
+
+.rounded {
   border-radius: 50%;
   aspect-ratio: 1;
 }
 
 .border {
   border: solid 1px white;
+}
+
+.header-color {
+  color: var(--color-main);
+  text-shadow: 1px 1px 1px white;
+}
+
+.text-center {
+  text-align: center;
+  text-wrap: balance;
+  width: 100%;
 }
 
 /* .home-banner img {
@@ -134,67 +148,80 @@ img .rounded {
 
 } */
 
-
 .banner-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 6px;
-    padding: 2rem;
-    margin: 1rem;
-    border: solid;
-    text-align: center;
-    gap: 1.5rem;
-    background-color: #fff;
-    color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  gap: 1.5rem;
+  color: #fff;
+  background-image: linear-gradient(180deg, #005ed1, transparent);
+}
+
+.banner-cta .time {
+  color: rgb(202, 202, 202);
 }
 
 .book-button {
-border: solid 1px var(--color-main-hover);
--webkit-box-shadow: 5px 5px 7px -1px #000000; 
-box-shadow: 5px 5px 7px -1px #000000;
-cursor: pointer;
-padding: 1rem 4rem;
-/* Rocket from www.freepik.com */
-background-image: url(/assets/images/rocket.jpg);
-background-size: 300%;
-background-position: left;
-border-radius: 6px;
-font-size: var(--fs-h2);
-font-weight: var(--fw-bold);
-color: #fff;
+  border: solid 1px var(--color-main);
+  -webkit-box-shadow: 5px 5px 7px -1px #000000;
+  box-shadow: 5px 5px 7px -1px #000000;
+  cursor: pointer;
+  padding: 0.5rem 4rem;
+  /* Rocket from www.freepik.com */
+  background-image: url(/assets/images/rocket.jpg);
+  background-size: 300%;
+  background-position: left;
+  border-radius: 6px;
+  font-size: var(--fs-p);
+  font-weight: var(--fw-regular);
+  color: #fff;
+}
+
+.book-button a {
+  margin: 0.5rem 4rem;
 }
 
 .book-button:hover {
-    background-position: right;
-    transition: 2s ease-in-out;
+  background-position: right;
+  transition: 2s ease-out;
 }
 
-
-.explore {
-    margin-top: 3rem;
+.grid {
+  margin-top: 3rem;
   display: grid;
   justify-items: center;
   gap: 1rem;
-
 }
 
 
 @media screen and (min-width: 810px) {
-    .explore {
-        grid-template-columns: 1fr 1fr;
-    }
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.explore-text {
+  /* Allows the Trex to stand on the CTA-banner, but not the text. */
+  margin-bottom: 2rem;
 }
 
 .explore-text > * {
-    text-wrap: balance;
-    line-height: 1.4;
-    padding: 0.25rem 0;
-}
-
-#explore-title {
-    text-wrap: nowrap;
+  text-wrap: balance;
+  line-height: 1.4;
+  padding: 0.25rem 0;
 }
 
 
+.lunar-bg {
+  background-color: #000000;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.lunar-bg img {
+  margin: 5rem 0;
+  filter: contrast(1.1);
+}
 

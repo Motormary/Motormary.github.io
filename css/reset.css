@@ -26,6 +26,10 @@ picture, svg, video {
     max-width: 100%;
 }
 
+address {
+  font-style: normal;
+}
+
 img {
     max-width: 100%;
     height: auto;
