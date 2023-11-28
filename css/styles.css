@@ -64,7 +64,7 @@
 
 body {
   /* svg from svgbackgrounds.com */
-  background-image: url(/assets/images/scales2.svg);
+  background-image: url(../assets/images/scales2.svg);
   background-position: left;
   font-family: "Roboto", sans-serif;
   color: #fff;
@@ -160,7 +160,7 @@ span {
   cursor: pointer;
   padding: 0.5rem 4rem;
   /* Rocket from www.freepik.com */
-  background-image: url(/assets/images/rocket.jpg);
+  background-image: url(../assets/images/rocket.jpg);
   background-size: 300%;
   background-position: left;
   border-radius: 6px;
@@ -213,6 +213,13 @@ span {
 
 .rocket-man {
   transform: rotate(180deg);
+}
+
+.rocket-man:hover {
+  cursor: crosshair;
+  filter: hue-rotate(80deg);
+  transition: 0.1;
+  animation-iteration-count: infinite;
 }
 
 /* lets the rocket pass behind text / above banner */
