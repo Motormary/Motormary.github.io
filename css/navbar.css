@@ -44,7 +44,7 @@ nav .nav-content {
   gap: 0.5rem;
 }
 
-.navbar-logo p {
+.navbar-logo h3 {
   font-size: 1.75rem;
   font-weight: var(--fw-bold);
   min-width: fit-content; /* Stops the logo from wrapping */
