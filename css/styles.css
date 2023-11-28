@@ -66,6 +66,7 @@ body {
   /* svg from svgbackgrounds.com */
   background-image: url(../assets/images/scales2.svg);
   background-position: left;
+  background-color: var(--color-secondary);
   font-family: "Roboto", sans-serif;
   color: #fff;
 /*   animation-name: bg;
