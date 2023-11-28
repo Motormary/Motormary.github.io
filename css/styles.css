@@ -263,3 +263,37 @@ span {
 
 
 
+
+.schedule {
+  background-image: var(--main-gradient);
+}
+
+.schedule {
+  position: relative;
+  border: solid 1px;
+  border-spacing: 0;
+}
+
+.schedule h2 {
+  position: absolute;
+  top: 0;
+  left: 4.25rem;
+}
+
+.schedule *  {
+  text-shadow: 1px 1px 1px black;
+}
+
+.schedule td {
+  border: solid 1px;
+
+}
+
+.schedule td {
+  padding: 1.5rem;
+  text-align: center;
+  text-wrap: balance;
+  max-width: 208px;
+}
+
+
