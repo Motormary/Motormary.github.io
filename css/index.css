@@ -1,0 +1,91 @@
+.banner-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    gap: 1.5rem;
+    color: #fff;
+    background-image: linear-gradient(180deg, #005ed1, transparent);
+  }
+  
+  .banner-cta .time {
+    color: rgb(202, 202, 202);
+  }
+  
+  /* EXPLORE */
+  
+  /* Allows the Trex to stand on the CTA-banner, but not the text. Which is why it is not included in .grid */
+  .explore-text,
+  #kids,
+  #teachers {
+    margin-bottom: 3rem;
+  }
+  
+  .explore-text > * {
+    text-wrap: balance;
+    line-height: 1.4;
+    padding: 0.25rem 0;
+  }
+  
+  /* LUNAR CTA */
+  
+  .lunar-bg {
+    background-color: black;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  
+  .lunar-bg img {
+    margin: 5rem 0;
+    filter: contrast(1.1);
+  }
+  
+  
+  /* NEWS */
+  
+  #news {
+    margin: 10rem 0;
+  }
+  
+  .news-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+  }
+  
+  .news-item {
+    position: relative;
+    max-width: 350px;
+    padding: 1.5rem;
+    background-color: var(--color-secondary);
+    border: solid 1px black;
+    line-height: 1.35;
+  }
+  
+  .news-item img {
+    border: solid 1px var(--color-main);
+  }
+  
+  .news-item:hover {
+    border-color: var(--color-main);
+    transition: 0.2s;
+  }
+  
+  .news-item > *:not(img) {
+    padding: 0.5rem 0;
+  }
+  
+  .news-item h3 {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  
+  /* Keeps the News header in place over the first card */
+  .news-item h2 {
+    position: absolute;
+    top: -4rem;
+    left: -0.2rem;
+  }
+  

@@ -1,7 +1,8 @@
+@import url("./index.css");
 @import url("./reset.css");
-@import url("./navbar.css");
-@import url("./footer.css");
-@import url("./sidebar.css");
+@import url("./components/navbar.css");
+@import url("./components/footer.css");
+@import url("./components/sidebar.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
 :root {
@@ -116,6 +117,14 @@ span {
   font-size: 1.125rem;
 }
 
+.copyright {
+  border-top: solid 1px black;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 0.75rem;
+}
+
 /* Wrapper */
 .container {
   max-width: var(--content-max-width);
@@ -149,6 +158,18 @@ span {
   display: grid;
   justify-items: center;
   gap: 1rem;
+}
+
+@media screen and (min-width: 810px) {
+  /* Forces the img+txt combos to stay together for ipad & above */
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* swaps the row-order of the section-content at smaller screens */
+  .reverse {
+    order: 1;
+  }
 }
 
 .centered {
@@ -240,138 +261,5 @@ span {
   -webkit-backdrop-filter: blur(4px);
 }
 
-
-/* .home-banner img {
-    opacity: 50%;
-    filter: blur(4px);
-}
-
-.home-banner h1 {
-    position: absolute;
-    background-image: var(--gradient);
-    background-size: 300%;
-    background-position: left;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-size: 6rem;
-    animation-name: home-header;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    user-select: none;
-    
-}
-
-@keyframes home-header {
-    25% {background-position: center;}
-    50% {background-position: right;}
-    75% {background-position: center;}
-
-} */
-
-.banner-cta {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem;
-  text-align: center;
-  gap: 1.5rem;
-  color: #fff;
-  background-image: linear-gradient(180deg, #005ed1, transparent);
-}
-
-.banner-cta .time {
-  color: rgb(202, 202, 202);
-}
-
-@media screen and (min-width: 810px) {
-  /* Forces the img+txt combos to stay together for ipad & above */
-  .grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* swaps the row-order of the section-content at smaller screens */
-  .reverse {
-    order: 1;
-  }
-}
-
-
-/* EXPLORE */
-
-/* Allows the Trex to stand on the CTA-banner, but not the text. Which is why it is not included in .grid */
-.explore-text,
-#kids,
-#teachers {
-  margin-bottom: 3rem;
-}
-
-.explore-text > * {
-  text-wrap: balance;
-  line-height: 1.4;
-  padding: 0.25rem 0;
-}
-
-/* CTA BANNNER */
-
-.lunar-bg {
-  background-color: black;
-  padding: 3rem 0;
-  text-align: center;
-}
-
-.lunar-bg img {
-  margin: 5rem 0;
-  filter: contrast(1.1);
-}
-
-
-/* NEWS */
-
-#news {
-  margin: 10rem 0;
-}
-
-.news-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-  justify-content: center;
-}
-
-.news-item {
-  position: relative;
-  max-width: 350px;
-  padding: 1.5rem;
-  background-color: var(--color-secondary);
-  border: solid 1px black;
-  line-height: 1.35;
-}
-
-.news-item img {
-  border: solid 1px var(--color-main);
-}
-
-.news-item:hover {
-  border-color: var(--color-main);
-  transition: 0.2s;
-}
-
-.news-item > *:not(img) {
-  padding: 0.5rem 0;
-}
-
-.news-item h3 {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* Keeps the News header in place over the first card */
-.news-item h2 {
-  position: absolute;
-  top: -4rem;
-  left: -0.2rem;
-}
 
 
