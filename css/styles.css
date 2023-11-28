@@ -199,7 +199,7 @@ span {
   user-select: none;
 }
 
-/* Remove the rocket at smaller screens to avoid x-overflow */
+/* Remove the rocket/keyframe at smaller screens to avoid x-overflow */
 @media (min-width: 810px) {
   @keyframes rocket {
     100% {transform: rotate(360deg);}

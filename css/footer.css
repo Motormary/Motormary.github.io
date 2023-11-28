@@ -11,6 +11,7 @@ footer .footer-content {
   margin: auto;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+  row-gap: 3rem;
 }
 
 .footer-item {
@@ -23,25 +24,16 @@ footer .footer-content {
   /* Avoid displacing footer-logo */
   .footer-item {
     align-items: center;
+
   }
 
-  .footer-item
-  .easter-egg,
-  .accessibility,
-  .admission,
-  .food,
-  .shop {
-    text-align: center;
-  }
 }
 
 .footer-item .easter-egg,
-.accessibility,
-.admission,
-.food,
-.shop {
+.footer-links, table > * {
+  font-size: var(--fs-p);
   line-height: 1.5;
-  text-wrap: balance; /* Balances the amount of text on each line if the browser supports it, e.g chrome. */
+  text-wrap: balance;
 }
 
 .footer-logo {
@@ -50,14 +42,12 @@ footer .footer-content {
   font-weight: var(--fw-medium);
 }
 
-.opening-hours {
-  line-height: 1.75;
-}
 
 /* column spacing for table */
 
-#footer tr > * {
-  padding: 0 0.5rem;
+#footer-table th:nth-child(1),
+#footer-table td:nth-child(1) {
+  padding-right: 3rem;
 }
 
 .opening-hours tr th {
@@ -66,5 +56,5 @@ footer .footer-content {
 
 .easter-egg a {
   text-decoration: underline;
-  text-underline-offset: 0.1rem;
+  text-underline-offset: 0.125rem;
 }
