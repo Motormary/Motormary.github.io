@@ -126,6 +126,7 @@ span {
 .rounded {
   border-radius: 50%;
   aspect-ratio: 1;
+  border: solid 6px var(--color-main);
 }
 
 .border {
@@ -154,6 +155,7 @@ span {
   align-items: center;
 }
 
+/* Button with rocket animation */
 .book-button {
   border: solid 1px var(--color-main);
   -webkit-box-shadow: 5px 5px 7px -1px #000000;
@@ -179,7 +181,7 @@ span {
   transition: 2s ease-out;
 }
 
-.kidsbox {
+.rocket-container {
   position: relative;
 }
 
@@ -218,6 +220,10 @@ span {
 
 .rocket-man:hover {
   cursor: crosshair;
+}
+
+/* pewpew */
+.rocket-man:active {
   filter: hue-rotate(80deg);
   transition: 0.1;
   animation-iteration-count: infinite;
