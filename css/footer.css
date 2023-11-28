@@ -2,6 +2,7 @@ footer {
   background-image: var(--main-gradient);
   max-width: 100%;
   padding: 1.5rem 1rem;
+  border-top: solid 1px black;
 }
 
 footer .footer-content {

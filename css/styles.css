@@ -297,7 +297,11 @@ span {
   padding: 1.5rem;
   background-color: var(--color-secondary);
   border: solid 1px black;
-  line-height: 1.5;
+  line-height: 1.35;
+}
+
+.news-item img {
+  border: solid 1px var(--color-main);
 }
 
 .news-item:hover {
@@ -305,8 +309,13 @@ span {
   transition: 0.2s;
 }
 
-.news-item > * {
-  padding: 0.3rem 0;
+.news-item > *:not(img) {
+  padding: 0.5rem 0;
+}
+
+.news-item h3 {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* Keeps the News header in place over the first card */
