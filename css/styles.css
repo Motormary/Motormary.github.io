@@ -4,13 +4,6 @@
 @import url("./sidebar.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 
-/* Wrapper */
-.container {
-  max-width: var(--content-max-width);
-  margin: auto;
-  padding: 0 2rem;
-}
-
 :root {
   --content-max-width: 170ch;
 
@@ -25,9 +18,9 @@
     #5261af,
     #6273ce
   );
-  --color-main2: #4496fa; /* Most h1/h2 and buttons */
-  --color-main: #8ecafd; /* hover-state buttons and/or borders */
-  --color-secondary: #192e5a; /* BG for cards */
+  --color-main2: #4496fa; 
+  --color-main: #8ecafd; 
+  --color-secondary: #1e569b;
   --text-secondary: #959595;
 
   --gradient: linear-gradient(
@@ -72,8 +65,33 @@
 body {
   /* svg from svgbackgrounds.com */
   background-image: url(/assets/images/scales2.svg);
+  background-position: left;
   font-family: "Roboto", sans-serif;
   color: #fff;
+/*   animation-name: bg;
+  animation-duration: 120s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear; */
+}
+
+/* Stops the animated background from running on smaller devices */
+/* @media (min-width: 1000px) {
+  @keyframes bg {
+    50% {
+      background-position: right;
+    }
+    100% {
+      background-position: left;
+    }
+  }
+} */
+
+/* Makes sure the background isn't repeating and cutting off */
+@media (max-width: 665px) {
+  body {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 main {
@@ -83,7 +101,6 @@ main {
 
 h1 {
   font-size: var(--fs-h1);
-
 }
 
 h2 {
@@ -98,6 +115,12 @@ span {
   font-size: 1.125rem;
 }
 
+/* Wrapper */
+.container {
+  max-width: var(--content-max-width);
+  margin: auto;
+  padding: 0 2rem;
+}
 
 .rounded {
   border-radius: 50%;
@@ -110,7 +133,7 @@ span {
 
 .header-color {
   color: var(--color-main);
-  text-shadow: 1px 1px 1px white;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
 
 .text-center {
@@ -119,6 +142,64 @@ span {
   width: 100%;
 }
 
+.grid {
+  margin-top: 3rem;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.centered {
+  align-items: center;
+}
+
+.book-button {
+  border: solid 1px var(--color-main);
+  -webkit-box-shadow: 5px 5px 7px -1px #000000;
+  box-shadow: 5px 5px 7px -1px #000000;
+  cursor: pointer;
+  padding: 0.5rem 4rem;
+  /* Rocket from www.freepik.com */
+  background-image: url(/assets/images/rocket.jpg);
+  background-size: 300%;
+  background-position: left;
+  border-radius: 6px;
+  font-size: var(--fs-p);
+  font-weight: var(--fw-regular);
+  color: #fff;
+}
+
+.book-button a {
+  margin: 0.5rem 4rem;
+}
+
+.book-button:hover {
+  background-position: right;
+  transition: 2s ease-out;
+}
+
+.rocket-box {
+  position: absolute;
+  height: calc(10vh + 130vw);
+  transform: translateX(-100%);
+  animation-name: rocket;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-delay: 1000ms;
+  animation-iteration-count: infinite;
+  z-index: -1;
+  user-select: none;
+}
+
+@keyframes rocket {
+  50% {transform: rotate(180deg);}
+  100% {transform: rotate(270deg);}
+
+}
+
+.rocket-man {
+  transform: rotate(180deg);
+}
 /* .home-banner img {
     opacity: 50%;
     filter: blur(4px);
@@ -163,48 +244,23 @@ span {
   color: rgb(202, 202, 202);
 }
 
-.book-button {
-  border: solid 1px var(--color-main);
-  -webkit-box-shadow: 5px 5px 7px -1px #000000;
-  box-shadow: 5px 5px 7px -1px #000000;
-  cursor: pointer;
-  padding: 0.5rem 4rem;
-  /* Rocket from www.freepik.com */
-  background-image: url(/assets/images/rocket.jpg);
-  background-size: 300%;
-  background-position: left;
-  border-radius: 6px;
-  font-size: var(--fs-p);
-  font-weight: var(--fw-regular);
-  color: #fff;
-}
-
-.book-button a {
-  margin: 0.5rem 4rem;
-}
-
-.book-button:hover {
-  background-position: right;
-  transition: 2s ease-out;
-}
-
-.grid {
-  margin-top: 3rem;
-  display: grid;
-  justify-items: center;
-  gap: 1rem;
-}
-
-
 @media screen and (min-width: 810px) {
+  /* Forces the img+txt combos to stay together for ipad & above */
   .grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  /* swaps the row-order of the section-content at smaller screens */
+  .reverse {
+    order: 1;
+  }
 }
 
-.explore-text {
-  /* Allows the Trex to stand on the CTA-banner, but not the text. */
-  margin-bottom: 2rem;
+/* Allows the Trex to stand on the CTA-banner, but not the text. Which is why it is not included in .grid */
+.explore-text,
+#kids,
+#teachers {
+  margin-bottom: 3rem;
 }
 
 .explore-text > * {
@@ -213,9 +269,8 @@ span {
   padding: 0.25rem 0;
 }
 
-
 .lunar-bg {
-  background-color: #000000;
+  background-color: black;
   padding: 3rem 0;
   text-align: center;
 }
@@ -225,3 +280,38 @@ span {
   filter: contrast(1.1);
 }
 
+#news {
+  margin: 10rem 0;
+}
+
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.news-item {
+  position: relative;
+  max-width: 350px;
+  padding: 1.5rem;
+  background-color: var(--color-secondary);
+  border: solid 1px black;
+  line-height: 1.5;
+}
+
+.news-item:hover {
+  border-color: var(--color-main);
+  transition: 0.2s;
+}
+
+.news-item > * {
+  padding: 0.3rem 0;
+}
+
+/* Keeps the News header in place over the first card */
+.news-item h2 {
+  position: absolute;
+  top: -4rem;
+  left: -0.2rem;
+}
