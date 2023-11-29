@@ -65,19 +65,19 @@
 /* Defined styles */
 
 body {
-  /* svg from svgbackgrounds.com */
+  /* Fallback + makes the contrast-validator shut up */
   background-color: var(--color-secondary);
   font-family: "Roboto", sans-serif;
   color: #fff;
 }
 
-.page1 {
+/* .page1 {
   background-image: url(../assets/images/scales2.svg);
 }
 
 .page2 {
   background-image: url(../assets/images/endless-constellation.svg);
-}
+} */
 
 /* Makes sure the background-svg isn't repeating on smaller devices */
 @media (max-width: 665px) {
@@ -121,6 +121,12 @@ span {
   margin-top: 1rem;
   width: 100%;
   font-size: 0.75rem;
+}
+
+@media (min-width: 2000px) {
+  .copyright {
+    text-align: center;
+  }
 }
 
 /* Wrapper */
@@ -398,6 +404,26 @@ span {
   }
 }
 
-#ecology {
-  margin-bottom: 6rem;
+
+.parallax {
+  height: 100%; 
+  background-attachment: fixed;
+  
+  /* Keeps the content-margin from showing the actual body, if any. */
+  padding-bottom: 6rem;
+}
+
+@media (max-width: 1024px) {
+  .parallax {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+
+.page1 {
+  background-image: url(../assets/images/scales2.svg);
+}
+
+.page2 {
+  background-image: url(../assets/images/endless-constellation.svg);
 }
