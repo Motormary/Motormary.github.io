@@ -40,11 +40,11 @@
             <li><a href="/contact.html">Contact</a></li>
             <li><a href="/documents.html">Documents</a></li>
           </ul>
-
+          <!-- Dropdown -->
           <div class="hamburger">
             <input type="checkbox" aria-controls="sidebar" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <div class="sidebar" id="sidebar">
+            <label for="menu-toggle" class="menu-icon" aria-label="icon">&#9776;</label>
+            <div class="sidebar" id="sidebar" aria-hidden="true">
               <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/exhibition.html">Exhibition</a></li>
@@ -62,6 +62,8 @@
   </header>
   <!--! MAIN START -->
   <main>
+
+    <!-- Banner -->
     <section id="banner" class="home-banner" role="banner">
       <img src="assets/images/header2.jpg" alt="home banner">
       <div class="banner-cta">
@@ -72,9 +74,10 @@
       </div>
     </section>
 
+<!-- Explore -->
     <section id="explore" aria-labelledby="explore-title">
       <div class="container grid">
-        <div class="explore-text">
+        <div class="text-spacing">
           <h1 id="explore-title" class="header-color">Explore together</h1>
           <p>Come join us at the Community Science Museum where we're committed to making science accessible to all.
             <br> <br>
@@ -102,6 +105,7 @@
       </div>
     </section>
 
+<!-- Lunar CTA -->
     <section id="lunar" class="lunar-bg">
       <div class="container">
         <h2>Join us for a night at the museum and watch the lunar eclipse</h2>
@@ -112,9 +116,10 @@
       </div>
     </section>
 
+<!-- Kids -->
     <section id="kids">
-      <div class="container grid centered z-1">
-        <div class="reverse bg-blur">
+      <div class="container grid z-1 centered">
+        <div class="reverse bg-blur text-spacing">
           <h1 class="header-color">For kids</h1>
           <p>
             Are you a young person looking to learn more about science? Come on down to our museum, there's plenty to
@@ -137,17 +142,19 @@
             how you can join, send us a message.
           </p>
         </div>
+        <!-- Rocket animation -->
         <div class="rocket-container">
           <img src="assets/images/kids.jpg" alt="Boy painting" class="rounded">
-          <div class="rocket-box">
+          <div class="rocket-box rocket-duration">
             <img src="assets/images/rocketman.png" alt="Rocket Man" class="rocket-man">
           </div>
         </div>
       </div>
     </section>
 
+<!-- Teachers -->
     <section id="teachers">
-      <div class="container grid centered">
+      <div class="container grid centered text-spacing">
         <div>
           <h1 class="header-color">For teachers</h1>
           <p>
@@ -166,6 +173,7 @@
       </div>
     </section>
 
+<!-- News -->
     <section id="news">
       <div class="container">
         <div class="news-grid">
@@ -215,7 +223,7 @@
   <!--! MAIN END -->
   <footer>
     <div class="footer-content">
-
+<!-- 1 -->
       <div class="footer-item">
         <a href="index.html" class="footer-logo">
           <!-- div keeps the logo from bulging -->
@@ -239,7 +247,7 @@
           </address>
         </div>
       </div>
-
+<!-- 2 -->
       <div class="footer-item">
         <div class="opening-hours">
           <table id="footer-table">
@@ -290,7 +298,7 @@
           </table>
         </div>
       </div>
-
+<!-- 3 -->
       <div class="footer-item footer-links">
         <a href="index.html">Home</a>
         <a href="exhibition.html">Exhibitions</a>
@@ -298,7 +306,7 @@
         <a href="contact.html">Contact</a>
         <a href="documents.html">Documents</a>
       </div>
-
+<!-- 4 -->
       <div class="footer-item footer-links">
         <a href="contact.html#accessibility">Accessibility</a>
         <a href="contact.html#shop">Shop</a>

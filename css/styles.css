@@ -19,8 +19,8 @@
     #5261af,
     #6273ce
   );
-  --color-main2: #4496fa; 
-  --color-main: #8ecafd; 
+  --color-main2: #4496fa;
+  --color-main: #8ecafd;
   --color-secondary: #1e569b;
   --text-secondary: #959595;
 
@@ -57,12 +57,6 @@
   --fs-p: 1.25rem;
 }
 
-/* @media (max-width: 40em) {
-    :root {
-        --fs-h1: 2.25rem
-    }
-} */
-
 body {
   /* svg from svgbackgrounds.com */
   background-image: url(../assets/images/scales2.svg);
@@ -88,7 +82,7 @@ body {
   }
 } */
 
-/* Makes sure the background isn't repeating and cutting off */
+/* Makes sure the background-svg isn't repeating on smaller devices */
 @media (max-width: 665px) {
   body {
     background-repeat: no-repeat;
@@ -135,7 +129,8 @@ span {
 .rounded {
   border-radius: 50%;
   aspect-ratio: 1;
-  border: solid 6px var(--color-main);
+  border: solid 4px var(--color-main);
+  border-style: dashed;
 }
 
 .border {
@@ -216,23 +211,30 @@ span {
   /* Even out the +height between top and bot of image */
   top: -10ch;
   animation-name: rocket;
-  animation-duration: 10s;
   animation-timing-function: linear;
   animation-delay: 1000ms;
   animation-iteration-count: infinite;
   user-select: none;
 }
 
+.rocket-duration {
+  animation-duration: 10s;
+}
+
+.satellite-duration {
+  animation-duration: 30s;
+}
+
 /* Remove the rocket/keyframe at smaller screens to avoid x-overflow */
 @media (min-width: 810px) {
   @keyframes rocket {
-    100% {transform: rotate(360deg);}
-  
+    100% {
+      transform: rotate(360deg);
+    }
   }
   .rocket-box {
     display: block;
   }
-
 }
 
 .rocket-man {
@@ -261,11 +263,22 @@ span {
   -webkit-backdrop-filter: blur(4px);
 }
 
+/* header/p combos */
+.text-spacing > *:not(img) {
+  text-wrap: balance;
+  line-height: 1.4;
+  padding: 0.25rem 0;
+}
 
-
+.exhibition-banner {
+  background-image: url(../assets/images/exhibition.jpg);
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 6rem;
+}
 
 .schedule {
-  background-image: var(--main-gradient);
+  backdrop-filter: brightness(40%);
 }
 
 .schedule {
@@ -280,13 +293,12 @@ span {
   left: 4.25rem;
 }
 
-.schedule *  {
+.schedule * {
   text-shadow: 1px 1px 1px black;
 }
 
 .schedule td {
   border: solid 1px;
-
 }
 
 .schedule td {
@@ -296,4 +308,14 @@ span {
   max-width: 208px;
 }
 
-
+@media (max-width: 1250px) {
+  .schedule {
+    display: none;
+    visibility: none;
+    position: unset;
+  }
+  .exhibition-banner {
+    padding: 5rem;
+    text-shadow: 1px 1px 1px black;
+  }
+}
