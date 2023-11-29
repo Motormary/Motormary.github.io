@@ -1,0 +1,78 @@
+.exhibition-banner {
+    background-image: url(../assets/images/exhibition.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 6rem;
+    border-bottom: solid 1px black;
+  }
+  
+  .schedule {
+    backdrop-filter: brightness(40%);
+  }
+  
+  .schedule {
+    position: relative;
+    border: solid 1px;
+    border-spacing: 0;
+  }
+  
+  .schedule h2 {
+    position: absolute;
+    top: 0;
+    left: 4.25rem;
+  }
+  
+  .schedule * {
+    text-shadow: 1px 1px 1px black;
+  }
+  
+  .schedule td {
+    border: solid 1px;
+  }
+  
+  .schedule td {
+    padding: 1.5rem;
+    text-align: center;
+    text-wrap: balance;
+    max-width: 208px;
+  }
+  
+  .tiny-schedule {
+    display: none;
+    visibility: none;
+  }
+  
+  
+  @media (max-width: 1250px) {
+    .schedule {
+      display: none;
+      visibility: none;
+      position: unset;
+    }
+    .exhibition-banner {
+      padding: 5rem;
+      text-shadow: 1px 1px 1px black;
+    }
+  
+    .tiny-schedule {
+      display: block;
+      text-align: center;
+      margin: 2rem;
+      background-color: var(--color-secondary);
+      border-radius: 10px;
+    }
+    
+    .tiny-schedule * {
+      line-height: 1.75;
+    }
+  }
+  
+  
+  
+  /* money to computer image separator for evolution text at smaller screens */
+  @media (min-width: 810px) {
+    .evo-img {
+      display: none;
+      visibility: none;
+    }
+  }
