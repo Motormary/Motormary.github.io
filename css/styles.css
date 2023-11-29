@@ -358,6 +358,12 @@ span {
   max-width: 208px;
 }
 
+.tiny-schedule {
+  display: none;
+  visibility: none;
+}
+
+
 @media (max-width: 1250px) {
   .schedule {
     display: none;
@@ -368,7 +374,21 @@ span {
     padding: 5rem;
     text-shadow: 1px 1px 1px black;
   }
+
+  .tiny-schedule {
+    display: block;
+    text-align: center;
+    margin: 2rem;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+  }
+  
+  .tiny-schedule * {
+    line-height: 1.75;
+  }
 }
+
+
 
 /* Image separator for evolution text at smaller screens */
 @media (min-width: 810px) {
