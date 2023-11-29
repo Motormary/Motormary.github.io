@@ -201,6 +201,20 @@ span {
 
 /* ANIMATIONS */
 
+.glow {
+  position: absolute;
+  top: calc(55% - 26.5px);
+  right: calc(27% - 26.5px);
+  animation-name: glow;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+  50% {transform: scale(0.7);}
+}
+
 /* Button with rocket animation */
 .book-button {
   border: solid 1px var(--color-main);
@@ -227,6 +241,8 @@ span {
   transition: 2s ease-out;
 }
 
+/* Orbiting animations */
+
 .rocket-container {
   position: relative;
 }
@@ -240,7 +256,7 @@ span {
   display: none;
 }
 
-/* Sun will rotate around #ecology until screen is 1900px, then hover. */
+/* Sun will rotate around #ecology until screen is below 1900px, then hover. */
 @keyframes sun {
   50% {
     transform: translateY(-2%);
@@ -267,7 +283,7 @@ span {
     height: calc(100% + 20ch);
     /* left = half the box - half the rocket */
     left: calc(50% - 52.5px);
-    /* Even out the +height between top and bot of image */
+    /* - half the added height */
     top: -10ch;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -293,6 +309,11 @@ span {
   .sun-duration {
     animation-duration: 4s;
   }
+
+  /* Keeps the sun away from tiny schedule */
+  .sun-rotate {
+    rotate: calc(-35deg);
+  }
 }
 
 .rocket-man {
@@ -315,7 +336,7 @@ span {
   z-index: 1;
 }
 
-/* Blurs the rocket behind the text */
+/* Blurs the satellites behind the text, looks like blur is lil hefty with animations - Disable if any complaints from peer review */
 .bg-blur {
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
