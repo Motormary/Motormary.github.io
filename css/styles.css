@@ -57,30 +57,27 @@
   --fs-p: 1.25rem;
 }
 
+/* ----------------------------------- */
+
+
+
+
+/* Defined styles */
+
 body {
   /* svg from svgbackgrounds.com */
-  background-image: url(../assets/images/scales2.svg);
-  background-position: left;
   background-color: var(--color-secondary);
   font-family: "Roboto", sans-serif;
   color: #fff;
-/*   animation-name: bg;
-  animation-duration: 120s;
-  animation-iteration-count: 1;
-  animation-timing-function: linear; */
 }
 
-/* Stops the animated background from running on smaller devices */
-/* @media (min-width: 1000px) {
-  @keyframes bg {
-    50% {
-      background-position: right;
-    }
-    100% {
-      background-position: left;
-    }
-  }
-} */
+.page1 {
+  background-image: url(../assets/images/scales2.svg);
+}
+
+.page2 {
+  background-image: url(../assets/images/endless-constellation.svg);
+}
 
 /* Makes sure the background-svg isn't repeating on smaller devices */
 @media (max-width: 665px) {
@@ -111,6 +108,13 @@ span {
   font-size: 1.125rem;
 }
 
+/* ----------------------------------- */
+
+
+
+
+/* Utils */
+
 .copyright {
   border-top: solid 1px black;
   padding-top: 1rem;
@@ -126,11 +130,10 @@ span {
   padding: 0 2rem;
 }
 
+/* For all the rounded images */
 .rounded {
   border-radius: 50%;
   aspect-ratio: 1;
-  border: solid 4px var(--color-main);
-  border-style: dashed;
 }
 
 .border {
@@ -147,6 +150,20 @@ span {
   text-wrap: balance;
   width: 100%;
 }
+
+/* spacing for text/img combos */
+.text-spacing > *:not(img) {
+  text-wrap: balance;
+  line-height: 1.4;
+  padding: 0.25rem 0;
+}
+
+/* ---------------------------------- */
+
+
+
+
+/* GRID SYSTEM */
 
 .grid {
   margin-top: 3rem;
@@ -170,6 +187,13 @@ span {
 .centered {
   align-items: center;
 }
+
+/* ------------------------------- */
+
+
+
+
+/* ANIMATIONS */
 
 /* Button with rocket animation */
 .book-button {
@@ -201,39 +225,67 @@ span {
   position: relative;
 }
 
-/* Spins the box containing the rocket */
+@keyframes rocket {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .rocket-box {
   display: none;
-  position: absolute;
-  height: calc(100% + 20ch);
-  /* left = half the box - half the rocket */
-  left: calc(50% - 52.5px);
-  /* Even out the +height between top and bot of image */
-  top: -10ch;
-  animation-name: rocket;
-  animation-timing-function: linear;
-  animation-delay: 1000ms;
-  animation-iteration-count: infinite;
-  user-select: none;
 }
 
-.rocket-duration {
-  animation-duration: 10s;
+/* Sun will rotate around #ecology until screen is 1900px, then hover. */
+@keyframes sun {
+  50% {
+    transform: translateY(-2%);
+  }
 }
 
-.satellite-duration {
-  animation-duration: 30s;
-}
-
-/* Remove the rocket/keyframe at smaller screens to avoid x-overflow */
-@media (min-width: 810px) {
-  @keyframes rocket {
+@media (min-width: 1900px) {
+  @keyframes sun {
     100% {
       transform: rotate(360deg);
     }
   }
+
+  .sun-duration {
+    animation-duration: 20s;
+  }
+}
+
+/* Remove the animations at smaller screens to avoid overflow */
+@media (min-width: 810px) {
   .rocket-box {
     display: block;
+    position: absolute;
+    height: calc(100% + 20ch);
+    /* left = half the box - half the rocket */
+    left: calc(50% - 52.5px);
+    /* Even out the +height between top and bot of image */
+    top: -10ch;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    user-select: none;
+  }
+}
+
+.rocket-duration {
+  animation-name: rocket;
+  animation-duration: 10s;
+}
+
+.satellite-duration {
+  animation-name: rocket;
+  animation-duration: 20s;
+}
+
+.sun-duration {
+  animation-name: sun;
+}
+
+@media (max-width: 1899px) {
+  .sun-duration {
+    animation-duration: 4s;
   }
 }
 
@@ -263,18 +315,16 @@ span {
   -webkit-backdrop-filter: blur(4px);
 }
 
-/* header/p combos */
-.text-spacing > *:not(img) {
-  text-wrap: balance;
-  line-height: 1.4;
-  padding: 0.25rem 0;
-}
+
+/* ---------------------------------------------------------- */
+
 
 .exhibition-banner {
   background-image: url(../assets/images/exhibition.jpg);
   background-size: cover;
   background-position: center;
   margin-bottom: 6rem;
+  border-bottom: solid 1px black;
 }
 
 .schedule {
@@ -318,4 +368,16 @@ span {
     padding: 5rem;
     text-shadow: 1px 1px 1px black;
   }
+}
+
+/* Image separator for evolution text at smaller screens */
+@media (min-width: 810px) {
+  .evo-img {
+    display: none;
+    visibility: none;
+  }
+}
+
+#ecology {
+  margin-bottom: 6rem;
 }

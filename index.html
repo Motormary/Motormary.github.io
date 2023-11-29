@@ -12,7 +12,7 @@
   <link rel="preload" href="assets/images/scales2.svg" as="image" type="image/svg+xml">
 </head>
 
-<body>
+<body class="page1">
 
   <header>
     <nav>
@@ -74,7 +74,7 @@
       </div>
     </section>
 
-<!-- Explore -->
+    <!-- Explore -->
     <section id="explore" aria-labelledby="explore-title">
       <div class="container grid">
         <div class="text-spacing">
@@ -105,7 +105,7 @@
       </div>
     </section>
 
-<!-- Lunar CTA -->
+    <!-- Lunar CTA -->
     <section id="lunar" class="lunar-bg">
       <div class="container">
         <h2>Join us for a night at the museum and watch the lunar eclipse</h2>
@@ -116,7 +116,7 @@
       </div>
     </section>
 
-<!-- Kids -->
+    <!-- Kids -->
     <section id="kids">
       <div class="container grid z-1 centered">
         <div class="reverse bg-blur text-spacing">
@@ -152,7 +152,7 @@
       </div>
     </section>
 
-<!-- Teachers -->
+    <!-- Teachers -->
     <section id="teachers">
       <div class="container grid centered text-spacing">
         <div>
@@ -173,10 +173,11 @@
       </div>
     </section>
 
-<!-- News -->
+    <!-- News -->
     <section id="news">
       <div class="container">
-        <div class="news-grid">
+        <!-- TODO Wrap each items in an article and fix the css -->
+        <article class="news-grid">
           <a href="exhibition.html#aeronautics" class="news-item">
             <h2 class="header-color">News</h2>
             <img src="assets/images/news1.jpg" alt="News Thumbnail 1">
@@ -215,7 +216,7 @@
               working relationship with a number of universities around the country.
             </p>
           </a>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -223,7 +224,7 @@
   <!--! MAIN END -->
   <footer>
     <div class="footer-content">
-<!-- 1 -->
+      <!-- COL 1 -->
       <div class="footer-item">
         <a href="index.html" class="footer-logo">
           <!-- div keeps the logo from bulging -->
@@ -247,58 +248,57 @@
           </address>
         </div>
       </div>
-<!-- 2 -->
+      <!-- COL 2 -->
       <div class="footer-item">
         <div class="opening-hours">
           <table id="footer-table">
-            <tr>
-              <th>
-                Days
-              </th>
-              <th>
-                Hours
-              </th>
-            </tr>
-            <tr>
-              <th>
-                Days
-              </th>
-              <th>
-                Hours
-              </th>
-            </tr>
-            <tr>
-              <td>Monday</td>
-              <td>Closed</td>
-            </tr>
-            <tr>
-              <td>Tuesday</td>
-              <td>10:00 - 16:00</td>
-            </tr>
-            <tr>
-              <td>Wednesday</td>
-              <td>10:00 - 16:00</td>
-            </tr>
-            <tr>
-              <td>Thursday</td>
-              <td>10:00 - 16:00</td>
-            </tr>
-            <tr>
-              <td>Friday</td>
-              <td>10:00 - 19:00</td>
-            </tr>
-            <tr>
-              <td>Saturday</td>
-              <td>09:00 - 16:00</td>
-            </tr>
-            <tr>
-              <td>Sunday</td>
-              <td>09:00 - 13:00</td>
-            </tr>
+
+            <thead>
+              <tr>
+                <th>
+                  Days
+                </th>
+                <th>
+                  Hours
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>Closed</td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>10:00 - 16:00</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>10:00 - 16:00</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td>10:00 - 16:00</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>10:00 - 19:00</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>09:00 - 16:00</td>
+              </tr>
+              <tr>
+                <td>Sunday</td>
+                <td>09:00 - 13:00</td>
+              </tr>
+            </tbody>
+            
           </table>
         </div>
       </div>
-<!-- 3 -->
+      <!-- COL 3 -->
       <div class="footer-item footer-links">
         <a href="index.html">Home</a>
         <a href="exhibition.html">Exhibitions</a>
@@ -306,7 +306,7 @@
         <a href="contact.html">Contact</a>
         <a href="documents.html">Documents</a>
       </div>
-<!-- 4 -->
+      <!-- COL 4 -->
       <div class="footer-item footer-links">
         <a href="contact.html#accessibility">Accessibility</a>
         <a href="contact.html#shop">Shop</a>
