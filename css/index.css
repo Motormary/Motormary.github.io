@@ -24,6 +24,10 @@
   #teachers {
     margin-bottom: 3rem;
   }
+
+  .explore-text strong {
+    color: yellowgreen;
+  }
   
   .explore-text > * {
     text-wrap: balance;
@@ -31,6 +35,10 @@
     padding: 0.25rem 0;
   }
 
+  .dinos {
+    display: flex;
+    align-items: end;
+  }
 
   
   /* LUNAR CTA */

@@ -241,8 +241,8 @@ span {
 /* Button with rocket animation */
 .book-button {
   border: solid 1px var(--color-main);
-  -webkit-box-shadow: 5px 5px 7px -1px #000000;
-  box-shadow: 5px 5px 7px -1px #000000;
+/*   -webkit-box-shadow: 5px 5px 7px -1px #000000;
+  box-shadow: 5px 5px 7px -1px #000000; */
   cursor: pointer;
   padding: 0.5rem 4rem;
   /* Rocket from www.freepik.com */
