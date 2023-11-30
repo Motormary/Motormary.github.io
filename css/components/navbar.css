@@ -15,15 +15,29 @@ nav .nav-content {
   height: 7rem;
 }
 
-.current-page a {
-  text-shadow: 0 0 10px white;
+.current-page {
   text-decoration: underline;
+  text-decoration-thickness: 3px;
   text-underline-offset: 2px;
 }
 
-.navbar-list li:hover {
-  text-shadow: 0 0 10px white;
-  transition: 0.4s;
+.navbar-list li {
+  position: relative;
+}
+
+.navbar-list li::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff; 
+  transition: width 0.3s ease;
+}
+
+.navbar-list li:hover::before {
+  width: 100%;
 }
 
 .nav-content > div {
