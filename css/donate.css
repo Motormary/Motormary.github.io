@@ -17,10 +17,7 @@
     margin: 3rem 0;
     text-align: center;
   }
-  .donate {
-    box-shadow: none;
-  padding: 0.5rem 8rem;
-  }
+
   
   /* img reset for donation page, 100% is for mobile responsiveness */
   #donate img:not(#donate-banner) {
