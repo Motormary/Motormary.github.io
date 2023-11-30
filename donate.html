@@ -2,17 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to Norwegian Community Science Museum">
-    <meta property="og:image" content="assets/images/LOGO_2">
-    <title>NCSM - Home</title>
-    <!-- <link rel="icon" type="image/x-icon" href="/assets/images/"> -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="preload" 
-      href="assets/images/scales2.svg"
-      as="image"
-      type="image/svg+xml" >
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Norwegian Community Science Museum">
+  <meta property="og:image" content="assets/images/LOGO_2">
+  <title>NCSM - Home</title>
+  <!-- <link rel="icon" type="image/x-icon" href="/assets/images/"> -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preload" href="assets/images/rainbow-vortex.svg" as="image" type="image/svg+xml">
 </head>
 
 <body>
@@ -64,14 +61,78 @@
     </nav>
   </header>
   <!--! MAIN START -->
-  <main class="parallax page3">
+  <main id="donate" class="parallax page3">
 
-<!-- Banner -->
-    <section id="donate">
+    <!-- Banner -->
+    <section role="banner" class="donate-banner">
+      <h1>Contribution</h1>
       <!-- sky @ me, renders @ freepik.com -->
-      <img src="assets/images/donation.jpg" alt="banner" role="banner">
+      <img id="donate-banner" src="assets/images/donation2.jpg" alt="banner" role="banner">
     </section>
 
+    <!-- Support -->
+    <section id="support">
+      <div class="container grid">
+        <div class="text-spacing">
+          <h2 class="text-shadow">Support</h2>
+          <p>
+            There are various ways you can support the museum. Donations are very welcome and are an important way we
+            keep
+            this museum open and accessible to the whole community. <br> <br>
+            You can also support us by donating items of interest to the museum's collections. If you have some item or
+            collection that you think others would enjoy, please let us know by contacting our Collections Department
+            and
+            they will be able to assist you.
+          </p>
+        </div>
+        <div>
+          <img src="assets/images/hiero.jpg" alt="hieroglyphs" class="rounded">
+        </div>
+      </div>
+      <div class="donate-button">
+        <a href="contact.html#form" class="book-button donate">Donate</a>
+      </div>
+    </section>
+
+    <!-- Volunteer -->
+    <section id="volunteer">
+      <div class="container grid">
+        <div class="text-spacing reverse">
+          <h2 class="text-shadow">Volunteer</h2>
+          <p>
+            A number of people volunteer their time and effort to keep the displays in good order and ready for visitors
+            to come and enjoy. Volunteering has its perks including getting to see behind the scenes of a working
+            museum, access to staff-only lectures, and a monthly lunch where all staff and volunteers come together to
+            discuss ideas for future exhibits and strategies for the museum. <br><br>
+            You can help volunteer in a number of different spheres. Please <a href="contact.html#form"><u>contact us</u></a> if you'd like to find out more
+            about how you can get involved.
+          </p>
+        </div>
+        <div>
+          <img src="assets/images/hands.jpg" alt="volunteers" class="rounded">
+        </div>
+      </div>
+    </section>
+
+    <!-- Internships -->
+    <section id="intership">
+      <div class="container grid">
+        <div class="text-spacing">
+          <h2 class="text-shadow">Volunteer</h2>
+          <p>
+            A number of people volunteer their time and effort to keep the displays in good order and ready for visitors
+            to come and enjoy. Volunteering has its perks including getting to see behind the scenes of a working
+            museum, access to staff-only lectures, and a monthly lunch where all staff and volunteers come together to
+            discuss ideas for future exhibits and strategies for the museum. <br><br>
+            You can help volunteer in a number of different spheres. Please <a href="contact.html#form"><u>contact us</u></a> if you'd like to find out more
+            about how you can get involved.
+          </p>
+        </div>
+        <div>
+          <img src="assets/images/intern.jpg" alt="museum" class="rounded">
+        </div>
+      </div>
+    </section>
 
   </main>
   <!--! MAIN END -->
@@ -82,14 +143,15 @@
         <a href="index.html" class="footer-logo">
           <!-- div keeps the logo from bulging -->
           <div>
-          <img src="assets/images/LOGO_2.png" alt="NCSM Logo" width="50" height="50">
-          </div>          <div class="footer-logo-text">
+            <img src="assets/images/LOGO_2.png" alt="NCSM Logo" width="50" height="50">
+          </div>
+          <div class="footer-logo-text">
             <p>Norwegian</p>
             <p>Community Science Museum</p>
           </div>
         </a>
         <div class="easter-egg">
-          
+
           <address>
             <a href="https://www.google.com/maps/place/26%C2%B021'28.4%22N+127%C2%B047'01.7%22E/@26.3579051,127.7836838,81m/data=!3m1!1e3!4m4!3m3!8m2!3d26.357896!4d127.783809?entry=ttu"
               target="_blank">
@@ -103,15 +165,15 @@
 
       <div class="footer-item">
         <div class="opening-hours">
-                    <table id="footer-table">
-         <tr>
-          <th>
-            Days
-          </th>
-          <th>
-            Hours
-          </th>
-         </tr>
+          <table id="footer-table">
+            <tr>
+              <th>
+                Days
+              </th>
+              <th>
+                Hours
+              </th>
+            </tr>
 
             <tr>
               <td>Monday</td>
@@ -146,11 +208,11 @@
       </div>
 
       <div class="footer-item footer-links">
-          <a href="index.html">Home</a>
-          <a href="exhibition.html">Exhibitions</a>
-          <a href="donate.html">Donate</a>
-          <a href="contact.html">Contact</a>
-          <a href="documents.html">Documents</a>
+        <a href="index.html">Home</a>
+        <a href="exhibition.html">Exhibitions</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+        <a href="documents.html">Documents</a>
       </div>
 
       <div class="footer-item footer-links">

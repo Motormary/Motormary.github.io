@@ -96,7 +96,10 @@ body {
 }
 
 .page3 {
-  background-image: url(../assets/images/flat-mountains.svg);
+  background-image: url(../assets/images/rainbow-vortex.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Makes sure the background-svg isn't repeating on smaller devices */
@@ -164,6 +167,18 @@ span {
 
 .border {
   border: solid 1px white;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 1px black;
+}
+
+.text-black {
+  color: black
+}
+
+.text-dark {
+  color: #333;
 }
 
 .header-color {
@@ -366,3 +381,41 @@ span {
 /* ---------------------------------------------------------- */
 
 
+
+.donate-banner {
+  position: relative;
+  border-bottom: solid 1px black;
+  margin-bottom: 6rem;
+}
+
+.donate-banner h1 {
+  position: absolute;
+  /* HOW DO YOU LIKE THEM APPLES */
+  top: calc(50% - var(--fs-h1) / 2);
+  right: calc(50% - var(--fs-h1) - 3ch);
+  /* DRY me */
+  text-shadow: 1px 1px 1px black;
+}
+
+.donate-button {
+  margin: 3rem 0;
+  text-align: center;
+}
+.donate {
+  box-shadow: none;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  background-size: 245%;
+}
+
+/* img reset for donation page, 100% is for mobile responsiveness */
+#donate img:not(#donate-banner) {
+  width: 100%;
+  max-width: 400px;
+}
+
+
+
+#donate > * {
+  margin-bottom: 6rem;
+}
