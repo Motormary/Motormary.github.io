@@ -1,3 +1,6 @@
+@import url(./styles.css);
+
+
 .banner-cta {
     display: flex;
     flex-direction: column;

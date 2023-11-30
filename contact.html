@@ -8,7 +8,7 @@
   <meta property="og:image" content="assets/images/LOGO_2">
   <title>NCSM - Home</title>
   <!-- <link rel="icon" type="image/x-icon" href="/assets/images/"> -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/contact.css">
   <link rel="preload" href="assets/images/scales2.svg" as="image" type="image/svg+xml">
 </head>
 
@@ -70,7 +70,7 @@
 
         <p class="text-center">Fill out the form below and we will get back to you within 24 hours.</p>
 
-        <form class="text-spacing contact-form" action="#" method="">
+        <form class="text-spacing contact-form" action="#">
           <div class="flex">
             <div class="form-group">
               <label for="first_name">First name:</label>
@@ -79,13 +79,13 @@
 
             <div class="form-group">
               <label for="last_name">Last name:</label>
-              <input type="last_name" id="last_name" name="last_name" required>
+              <input type="text" id="last_name" name="last_name" required>
             </div>
           </div>
 
           <div class="form-group">
-            <label for="subject">Your email:</label>
-            <input type="text" id="subject" name="subject" required>
+            <label for="email">Your email:</label>
+            <input type="text" id="email" name="email" required>
           </div>
 
           <div class="form-group">
@@ -99,14 +99,14 @@
           </div>
 
           <div class="form-group">
-            <a type="submit" href="#modal" class="book-button donate" aria-controls="modal">Submit</a>
+            <a href="#modal" class="book-button donate" aria-controls="modal">Submit</a>
           </div>
         </form>
-        <div id="modal" class="modal-overlay" aria-hidden="true">
+        <div id="modal" class="modal-overlay" aria-hidden="true" onclick="history.go(-1);">
           <div class="modal-content text-spacing">
             <div class="between">
               <h3>Thank you!</h3>
-              <span tabindex="0" onclick="history.go(-1);" aria-label="icon" aria-controls="modal">x</span>
+              <span tabindex="0" onclick="history.go(-1);" aria-controls="modal">x</span>
             </div>
             <img src="assets/images/yoshi.png" alt="yoshi">
             <p>We will get back to you as soon as possible!</p>
@@ -191,8 +191,6 @@
               href="#form"><u>contact us</u></a> to arrange
             the tour.
           </p>
-          <h3></h3>
-          <p></p>
         </div>
         <!-- Access / food -->
         <div id="accessibility" class="info-table text-spacing">

@@ -1,3 +1,5 @@
+@import url(./styles.css);
+
 .exhibition-banner {
     background-image: url(../assets/images/exhibition.jpg);
     background-size: cover;
@@ -74,5 +76,26 @@
     .evo-img {
       display: none;
       visibility: none;
+    }
+  }
+
+  .bacteria-container {
+    animation: bounce 40s linear infinite;
+  }
+
+  @keyframes bounce {
+    50% {
+      transform: translateY(10%) ;
+    }
+  }
+
+  .bacteria {
+    width: 90%;
+    animation: bacteria 40s linear infinite;
+  }
+
+  @keyframes bacteria {
+    100% {
+      transform: rotate(360deg) ;
     }
   }
