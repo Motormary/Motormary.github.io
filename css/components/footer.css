@@ -45,10 +45,17 @@ footer .footer-content {
 
 /* column spacing for table */
 
+/* Don't use ID again if it's not going to be unique */
 #footer-table th:nth-child(1),
 #footer-table td:nth-child(1) {
   padding-right: 3rem;
 }
+
+.times-table th:nth-child(1),
+.times-table td:nth-child(1) {
+  padding-right: 3rem;
+}
+
 
 .opening-hours tr th {
   text-align: start;
