@@ -55,9 +55,8 @@
 
 .lunar-eclipse {
   position: relative;
-  width: fit-content;
+  /* width: fit-content; */
   margin: auto;
-  height: fit-content;
 }
 
 .bloodmoon {
@@ -68,7 +67,7 @@
 .bloodmoon {
   position: absolute;
   top: 0;
-  left: 0;
+  left: calc(50% - 100px);
   opacity: 0;
   transition: opacity 1s;
 }
@@ -77,6 +76,22 @@
 .bloodmoon:active,
 .bloodmoon:focus {
   opacity: 1;
+}
+
+.moonshine {
+  height: fit-content;
+  width: fit-content;
+  position: absolute;
+  top: -50%;
+  left: calc(50% - 200px);
+  /* Makes the button underneath the shine clickable. */
+  pointer-events: none;
+}
+
+@media (max-width: 400px) {
+  .moonshine {
+    display: none;
+  }
 }
 
 .hover-box {
@@ -106,6 +121,7 @@
 .lunar-button {
   margin-top: 3rem;
 }
+
 
 .mb-6 {
   margin-bottom: 6rem;

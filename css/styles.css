@@ -75,10 +75,15 @@ body {
   padding-bottom: 6rem;
 }
 
+/* Turn off parallax and repeating backgrounds for smaller devices. */
 @media (max-width: 1024px) {
-  .parallax {
+  .page1, .page3 {
     background-attachment: scroll;
     background-size: cover;
+  }
+
+  .page2 {
+    background-attachment: scroll;
   }
 }
 
@@ -98,12 +103,12 @@ body {
 }
 
 /* Makes sure the background-svg isn't repeating on smaller devices */
-@media (max-width: 665px) {
+/* @media (max-width: 665px) {
   body {
     background-repeat: no-repeat;
     background-size: cover;
   }
-}
+} */
 
 main {
   max-width: 1920px;
@@ -184,6 +189,10 @@ span {
   width: 100%;
 }
 
+.p-0 {
+  padding: 0;
+}
+
 /* spacing for text/img combos */
 .text-spacing > *:not(img) {
   text-wrap: balance;
@@ -253,6 +262,7 @@ span {
   font-size: var(--fs-p);
   font-weight: var(--fw-regular);
   color: #fff;
+
 }
 
 .book-button a {
