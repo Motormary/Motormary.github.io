@@ -1,104 +1,159 @@
 @import url(./styles.css);
 
-
 .banner-cta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    text-align: center;
-    gap: 1.5rem;
-    color: #fff;
-    background-image: linear-gradient(180deg, #005ed1, transparent);
-  }
-  
-  .banner-cta .time {
-    color: rgb(202, 202, 202);
-  }
-  
-  /* EXPLORE */
-  
-  /* Allows the Trex to stand on the CTA-banner, but not the text. Which is why it is not included in .grid */
-  .explore-text,
-  #kids,
-  #teachers {
-    margin-bottom: 3rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  gap: 1.5rem;
+  color: #fff;
+  background-image: linear-gradient(180deg, #005ed1, transparent);
+}
 
-  .explore-text strong {
-    color: yellowgreen;
-  }
-  
-  .explore-text > * {
-    text-wrap: balance;
-    line-height: 1.4;
-    padding: 0.25rem 0;
-  }
+.banner-cta .time {
+  color: rgb(202, 202, 202);
+}
 
-  .dinos {
-    display: flex;
-    align-items: end;
-  }
+/* EXPLORE */
 
-  
-  /* LUNAR CTA */
-  
-  .lunar-bg {
-    background-color: black;
-    padding: 3rem 0;
-    text-align: center;
-  }
-  
-  .lunar-bg img {
-    margin: 5rem 0;
-    filter: contrast(1.1);
-  }
-  
-  
-  /* NEWS */
-  
-  #news {
-    margin: 10rem 0;
-  }
-  
-  .news-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-    justify-content: center;
-  }
-  
-  .news-item {
-    position: relative;
-    max-width: 350px;
-    padding: 1.5rem;
-    background-color: var(--color-secondary);
-    border: solid 1px black;
-    line-height: 1.35;
-  }
-  
-  .news-item img {
-    border: solid 1px var(--color-main);
-  }
-  
-  .news-item:hover {
-    border-color: var(--color-main);
-    transition: 0.2s;
-  }
-  
-  .news-item > *:not(img) {
-    padding: 0.5rem 0;
-  }
-  
-  .news-item h3 {
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
-  
-  /* Keeps the News header in place over the first card */
-  .news-item h2 {
-    position: absolute;
-    top: -4rem;
-    left: -0.2rem;
-  }
-  
+/* Allows the Trex to stand on the CTA-banner, but not the text. Which is why it is not included in .grid */
+.explore-text,
+#kids,
+#teachers {
+  margin-bottom: 3rem;
+}
+
+.explore-text strong {
+  color: yellowgreen;
+}
+
+.explore-text > * {
+  text-wrap: balance;
+  line-height: 1.4;
+  padding: 0.25rem 0;
+}
+
+.dinos {
+  display: flex;
+  align-items: end;
+}
+
+/* LUNAR CTA */
+
+.lunar-bg {
+  background-image: url(../assets/images/night.svg);
+  padding: 3rem 0;
+  text-align: center;
+  border-top: solid 2rem black;
+  border-bottom: solid 2rem black;
+}
+
+.lunar-bg img {
+  filter: contrast(1.1);
+}
+
+.lunar-eclipse {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+  height: fit-content;
+}
+
+.bloodmoon {
+  position: absolute;
+  animation: eclipse 5s linear infinite;
+}
+
+.bloodmoon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.bloodmoon:hover,
+.bloodmoon:active,
+.bloodmoon:focus {
+  opacity: 1;
+}
+
+.hover-box {
+  padding: 2rem 0;
+}
+
+.hover-me {
+  position: relative;
+  width: fit-content;
+  padding: 0.5rem;
+  background-color: var(--color-main2);
+  border-radius: 6px;
+  margin: auto;
+}
+
+.hover-me::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: var(--color-main2) transparent transparent transparent;
+}
+
+.lunar-button {
+  margin-top: 3rem;
+}
+
+.mb-6 {
+  margin-bottom: 6rem;
+}
+
+/* NEWS */
+
+#news {
+  margin: 10rem 0;
+}
+
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+}
+
+.news-item {
+  position: relative;
+  max-width: 350px;
+  padding: 1.5rem;
+  background-color: var(--color-secondary);
+  border: solid 1px black;
+  line-height: 1.35;
+}
+
+.news-item img {
+  border: solid 1px var(--color-main);
+}
+
+.news-item:hover {
+  border-color: var(--color-main);
+  transition: 0.2s;
+}
+
+.news-item > *:not(img) {
+  padding: 0.5rem 0;
+}
+
+.news-item h3 {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Keeps the News header in place over the first card */
+.news-item h2 {
+  position: absolute;
+  top: -4rem;
+  left: -0.2rem;
+}
