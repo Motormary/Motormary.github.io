@@ -9,8 +9,6 @@
   <title>NCSM - Visit</title>
   <!-- <link rel="icon" type="image/x-icon" href="/assets/images/"> -->
   <link rel="stylesheet" href="css/index.css">
-<!--   <link rel="stylesheet" href="css/components/navbar.css">
-  <link rel="stylesheet" href="css/components/sidebar.css"> -->
   <link rel="preload" href="assets/images/scales2.svg" as="image" type="image/svg+xml">
 </head>
 
@@ -32,9 +30,8 @@
         </a>
       </div>
       <nav>
-
         <div class="nav-items">
-
+          <!-- Top -->
           <ul class="navbar-list">
             <li class="current-page"><a href="/">Visit</a></li>
             <li><a href="/exhibition.html">Exhibition</a></li>
@@ -42,25 +39,26 @@
             <li><a href="/contact.html">Contact</a></li>
             <li><a href="/documents.html">Documents</a></li>
           </ul>
-          <!-- Sidebar -->
-          <div class="hamburger">
-            <input type="checkbox" aria-controls="sidebar" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-icon" aria-label="icon">&#9776;</label>
-            <div class="sidebar" id="sidebar" aria-hidden="true">
-              <ul>
-                <li><a href="/">Visit</a></li>
-                <li><a href="/exhibition.html">Exhibition</a></li>
-                <li><a href="/donate.html">Donate</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li><a href="/documents.html">Documents</a></li>
-              </ul>
-            </div>
-          </div>
-
         </div>
       </nav>
+      <!-- Sidebar -->
+      <!-- Teacher mentioned removing this and using the nav-list above and place it on the sidebar. -->
+      <!-- Sure, but how does one go about handling the logic for the rare event where the user opens the sidebar then resizes the window? -->
+      <!-- (Hamburger menu/checkbox is removed at larger screens) -->
+      <nav class="sidenav" aria-hidden="true">
+        <input type="checkbox" aria-controls="sidebar" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon" aria-label="icon">&#9776;</label>
+        <div class="sidebar" id="sidebar" aria-hidden="true">
+          <ul>
+            <li><a href="/">Visit</a></li>
+            <li><a href="/exhibition.html">Exhibition</a></li>
+            <li><a href="/donate.html">Donate</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/documents.html">Documents</a></li>
+          </ul>
+        </div>
 
-
+      </nav>
     </div>
   </header>
   <!--! MAIN START -->

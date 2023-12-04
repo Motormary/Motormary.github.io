@@ -1,3 +1,7 @@
+.sidenav {
+  display: none;
+}
+
 header {
   background-color: var(--color-main2);
   background-image: var(--main-gradient);
@@ -92,6 +96,10 @@ header {
     width: 100%;
     z-index: 50;
     top: 0
+  }
+
+  .sidenav {
+    display: block;
   }
 }
 
