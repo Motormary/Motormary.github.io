@@ -1,4 +1,4 @@
-nav {
+header {
   background-color: var(--color-main2);
   background-image: var(--main-gradient);
   max-width: 100%;
@@ -6,7 +6,7 @@ nav {
   border-bottom: solid 1px black;
 }
 
-nav .nav-content {
+.nav-content {
   max-width: 1920px;
   margin: auto;
   display: flex;
@@ -40,7 +40,7 @@ nav .nav-content {
   width: 100%;
 }
 
-.nav-content > div {
+.nav-content > div, nav {
   width: 100%;
 }
 
@@ -79,12 +79,19 @@ nav .nav-content {
 @media only screen and (max-width: 1200px) {
   .navbar-list {
     display: none;
-    visibility: hidden;
+   
   }
 
   .nav-items {
     display: flex;
     justify-content: end;
+  }
+
+  header {
+    position: sticky;
+    width: 100%;
+    z-index: 50;
+    top: 0
   }
 }
 
