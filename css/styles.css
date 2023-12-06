@@ -214,6 +214,7 @@ span {
 @media screen and (min-width: 810px) {
   /* Forces the img+txt combos to stay together for ipad & above */
   .grid {
+    margin-top: 10rem;
     grid-template-columns: 1fr 1fr;
   }
 
