@@ -9,13 +9,13 @@
     align-items: center;
     gap: 1rem;
     background-color: var(--color-secondary);
-    padding: 1.75rem;
+    padding: 1.5rem 0;
     border: solid 2px black;
     cursor: pointer;
 }
 
 .document-card img {
-    border: solid 1px black;
+    padding: 0 1.5rem;
 }
 
 .document-card:hover {
