@@ -1,7 +1,7 @@
 @import url(./styles.css);
 
 .documents {
-    padding: 3rem 1rem;
+    padding: 3rem 1.5rem;
 }
 .document-card {
     display: flex;
